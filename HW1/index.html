@@ -3,15 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	
 </head>
 <body>
 	<form>
-		<input id="colsAmount" type="number" min="0" max="1000">
-		<input id="rowsAmount" type="number" min="0" max="1000">
-		<button id="createNewTable"></button>
+		<input id="colsAmount" type="number" min="1" max="1000" placeholder="Columns">
+		<input id="rowsAmount" type="number" min="1" max="1000" placeholder="Rows">
+		<button id="createNewTable">Create Table</button>
 		<div>
 			
 		</div>
 	</form>
+	<style>
+		td{
+			min-width: 90px;
+			height: 20px;
+			border: 1px solid #000000;
+		}
+		table{
+			border-collapse: collapse;
+		}
+		tr:nth-child(2n){
+			background-color: #cccccc;
+		}
+	</style>
+	<table style="border: 1px solid #cccccc">
+		<tbody id="dinamic-table-body">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>	
+		</tbody>
+		
+	</table>
 </body>
+<script src="script.js"></script>
 </html>

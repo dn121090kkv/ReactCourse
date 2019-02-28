@@ -3,49 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form>
-		<input id="colsAmount" type="number" min="1" max="1000" placeholder="Columns">
-		<input id="rowsAmount" type="number" min="1" max="1000" placeholder="Rows">
-		<button id="createNewTable">Create Table</button>
-		<div>
-			
+	<form class="create-form">
+		<h1 class="form-title">Create table</h1>
+		<div class="form-group">
+			<input id="colsAmount" type="number" min="1" max="1000" placeholder="Columns">
+		</div>
+		<div class="form-group">
+			<input id="rowsAmount" type="number" min="1" max="1000" placeholder="Rows">
+		</div>
+		<div class="form-group">
+			<button class="btn" id="createNewTable">Create Table</button>
 		</div>
 	</form>
-	<style>
-		td{
-			min-width: 90px;
-			height: 20px;
-			border: 1px solid #000000;
-		}
-		table{
-			border-collapse: collapse;
-		}
-		tr:nth-child(2n){
-			background-color: #cccccc;
-		}
-	</style>
-	<table style="border: 1px solid #cccccc">
+	<table>
 		<tbody id="dinamic-table-body">
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>	
 		</tbody>
-		
 	</table>
+	<div class="tooltip-elem" id="tooltip-elem"></div>
 </body>
 <script src="script.js"></script>
 </html>
